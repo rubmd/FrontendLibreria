@@ -1,0 +1,20 @@
+<body>
+    <section class="form-login">
+        <h5>Iniciar Sesion</h5>
+        <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+
+            <input formControlName="usuario" type="email" id="email" class="validate" placeholder="Usuario">
+
+            <input formControlName="clave" type="password" id="password" class="validate" placeholder="Clave" />
+            <div class="row center-align">
+                <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit"
+                    name="action">Ingresar
+                    <i class="material-icons right">send</i>
+                </button>
+            </div> 
+        </form>
+
+        <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+        <p><a href="#">Registrate!</a></p>
+
+    </section>

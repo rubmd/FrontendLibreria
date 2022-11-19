@@ -1,0 +1,34 @@
+<div class="row">
+    <h3 class="center-align">Crear Libro</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidador" (ngSubmit)="EditarLibro()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id">
+            <div class="input-field">
+                <label for="titulo" class="activate">Titulo</label>
+                <input formControlName="titulo" type="text" name="titulo" required>
+            </div>
+
+            <div class="input-field">
+                <label for="precio" class="activate">Precio</label>
+                <input formControlName="precio" type="text" name="precio" required>
+            </div>
+
+            <div class="input-field">
+                <label for="autor" class="activate">Autor</label>
+                <input formControlName="autor" type="text" name="autor" required>
+            </div>
+
+            <div class="input-field">
+                <label for="imagen" class="activate">Imagen</label>
+                <input formControlName="imagen" type="text" name="imagen" required>
+            </div>
+
+            <p class="center-align">
+                <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i
+                        class="material-icons right">send</i>Enviar</button>
+            </p>
+
+        </form>
+
+    </article>
+</div>

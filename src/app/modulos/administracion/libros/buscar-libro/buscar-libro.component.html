@@ -1,0 +1,41 @@
+<a routerLink="/administracion/crear-libro" class="btn">Nuevo Libro</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Autor
+            </th>
+            <th>
+                Imagen
+            </th>
+            <th>
+                Editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let l of listadoRegistros">
+            <td>
+                {{l.titulo}}
+            </td>
+            <td>
+                {{l.precio}}
+            </td>
+            <td>
+                {{l.autor}}
+            </td>
+            <td>
+                <img src="{{l.imagen}}" class="imagenLibro" />
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-libro/{{l.id}}" class="btn">Editar libro</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
