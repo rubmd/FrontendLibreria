@@ -31,7 +31,6 @@ export class IdentificacionComponent implements OnInit {
     this.servicioSeguridad.Identificar(usuario, claveCifrada).subscribe((datos:any) => {
       this.servicioSeguridad.AlmacenarSesion(datos);
       this.router.navigate(["/inicio"]);
-      alert("Datos Correctos")
     }, (error: any) => {
       // KO
       alert("Datos Inválidos");

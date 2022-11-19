@@ -6,15 +6,21 @@ import { BuscarLibroComponent } from './libros/buscar-libro/buscar-libro.compone
 import { EditarLibroComponent } from './libros/editar-libro/editar-libro.component';
 import { CrearLibroComponent } from './libros/crear-libro/crear-libro.component';
 import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
+import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 
 const routes: Routes = [
+  {
+    path: "listar-clientes",
+    component: BuscarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
   {
     path: 'crear-cliente',
     component: CrearClienteComponent,
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path: 'editar-cliente',
+    path: 'editar-cliente/:id',
     component: EditarClienteComponent,
     canActivate: [ValidadorSesionGuard]
   },
