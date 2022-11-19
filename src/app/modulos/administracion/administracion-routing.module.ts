@@ -9,6 +9,7 @@ import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard'
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 
 const routes: Routes = [
+  //crud clientes
   {
     path: "listar-clientes",
     component: BuscarClienteComponent,
@@ -24,6 +25,7 @@ const routes: Routes = [
     component: EditarClienteComponent,
     canActivate: [ValidadorSesionGuard]
   },
+  //crud libros
   {
     path: "listar-libros",
     component: BuscarLibroComponent,
@@ -38,7 +40,8 @@ const routes: Routes = [
     path: 'editar-libro/:id',
     component: EditarLibroComponent,
     canActivate: [ValidadorSesionGuard]
-  }
+  },
+
 
 ];
 
