@@ -1,1 +1,26 @@
-<p>eliminar-libro works!</p>
+<div class="row">
+    <h3 class="center-align">Eliminar Libro</h3>
+    <article class="col s6 offset-s3">
+        <form (ngSubmit)="EliminarLibro()">
+            <strong>¿Realmente desea eliminar el libro con la siguiente informacion?</strong>
+            <br>
+            <ul>
+                <li>
+                    Titulo: {{titulo}}
+                </li>
+                <li>
+                    Autor: {{autor}}
+                </li>
+                <li>
+                    Imagen:<br><img src="{{imagen}}" class="imagenLibro">  
+                </li>
+            </ul>
+  
+            <p class="center-align">
+                <button routerLink="/administracion/listar-libros" class="waves-effect waves-light btn">Cancelar</button>
+                &nbsp; <button class="btn btn-warning red" type="submit">Eliminar</button>                
+            </p>
+
+        </form>
+    </article>
+</div>

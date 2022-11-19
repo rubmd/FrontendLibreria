@@ -17,6 +17,9 @@
             <th>
                 Editar
             </th>
+            <th>
+                Eliminar
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +38,11 @@
             </td>
             <td>
                 <a routerLink="/administracion/editar-libro/{{l.id}}" class="btn">Editar libro</a>
+                
+            </td>
+            <td>
+                
+                <a routerLink="/administracion/eliminar-libro/{{l.id}}"class="btn btn-warning red">Eliminar libro</a>
             </td>
         </tr>
     </tbody>
