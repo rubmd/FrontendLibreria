@@ -1,9 +1,16 @@
-<body>
-    <section class="form-login">
-      <h5>Recupera tu Clave</h5>
-      <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
-      <input class="buttons" type="submit" name="" value="Recuperar Clave">
-      <p>Tu nueva contraseña envia al telefono registrado en tu cuenta</p>
-    </section>
 
-  </body>
+  <body>
+    <section class="form-login">
+        <h5>Recuperar Clave</h5>
+        <form [formGroup]="fgValidador" (ngSubmit)="RecuperarClave()">
+
+            <input formControlName="correo" type="email" id="email" class="validate" placeholder="Usuario o Correo">
+
+            <div class="row center-align">
+                <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit"
+                    name="action">Recuperar Clave
+                    <i class="material-icons right">send</i>
+                </button>
+            </div> 
+        </form>
+    </section>

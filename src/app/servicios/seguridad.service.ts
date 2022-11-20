@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificar } from '../modelos/identificar.modelo';
+import { ModeloRecuperarClave } from '../modelos/recuperarClave.modelo';
 
 
 @Injectable({
@@ -36,6 +37,16 @@ export class SeguridadService {
     return this.http.post<ModeloIdentificar>(`${this.url}/identificarCliente`, {
       usuario: usuario,
       clave: clave
+    }, {
+      headers: new HttpHeaders({
+
+      })
+    })
+  }
+
+  RecuperarClave(correo: string):Observable<ModeloRecuperarClave> {
+    return this.http.post<ModeloRecuperarClave>(`${this.url}/recuperarClave`, {
+      correo: correo
     }, {
       headers: new HttpHeaders({
 

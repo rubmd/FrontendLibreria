@@ -8,6 +8,7 @@ import { CrearLibroComponent } from './libros/crear-libro/crear-libro.component'
 import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 import { EliminarLibroComponent } from './libros/eliminar-libro/eliminar-libro.component';
+import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-cliente.component';
 
 const routes: Routes = [
   //crud clientes
@@ -24,6 +25,11 @@ const routes: Routes = [
   {
     path: 'editar-cliente/:id',
     component: EditarClienteComponent,
+    canActivate: [ValidadorSesionGuard]
+  },
+  {
+    path: 'eliminar-cliente/:id',
+    component: EliminarClienteComponent,
     canActivate: [ValidadorSesionGuard]
   },
   //crud libros

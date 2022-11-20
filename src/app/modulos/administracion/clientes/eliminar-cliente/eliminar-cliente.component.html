@@ -1,1 +1,29 @@
-<p>eliminar-cliente works!</p>
+<div class="row">
+    <h3 class="center-align">Eliminar Cliente</h3>
+    <article class="col s6 offset-s3">
+        <form (ngSubmit)="EliminarCliente()">
+            <strong>¿Realmente desea eliminar este Cliente?</strong>
+            <br>
+            <ul>
+                <li>
+                    Nombres: {{nombres}}
+                </li>
+                <li>
+                    Apellidos: {{apellidos}}
+                </li>
+                <li>
+                    Correo: {{correo}}
+                </li>
+                <li>
+                    Celular: {{celular}}
+                </li>
+            </ul>
+  
+            <p class="center-align">
+                <button routerLink="/administracion/listar-clientes" class="waves-effect waves-light btn">Cancelar</button>
+                &nbsp; <button class="btn btn-warning red" type="submit">Eliminar</button>                
+            </p>
+
+        </form>
+    </article>
+</div>
